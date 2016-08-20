@@ -88,11 +88,13 @@ def writeBarcode(barcodeHead, counterColName):
 
 def exportExcelFile(inputFileName, fileList, counterColName):
 	excel = Workbook()
+	outputFileName = inputFileName.replace('.xlsx','').replace('.xls','')+'_result.xls'
 	for fileName in fileList:
 		writeBarcode(fileName, counterColName)
 		sheet = excel.add_sheet(fileName)
 		writeSheet(sheet, fileName)
-	excel.save(inputFileName.replace('.xlsx','').replace('.xls','')+'_result.xls')
+	excel.save(outputFileName)
+	print "Output now available in "+outputFileName
 
 def writeSheet(sheet, fileName):
 	f = codecs.open(fileName+'_addBar.txt','r','utf-8')
@@ -121,5 +123,5 @@ if __name__ == '__main__':
 	fileList = writeBook(book, counterDict)
 	# writeBarcode('KO15061', counterColName)
 	exportExcelFile(inputFileName, fileList, counterColName)
-	#removeFile(fileList)
+	removeFile(fileList)
 	#############################
