@@ -92,7 +92,7 @@ def exportExcelFile(inputFileName, fileList, counterColName):
 		writeBarcode(fileName, counterColName)
 		sheet = excel.add_sheet(fileName)
 		writeSheet(sheet, fileName)
-	excel.save(inputFileName.replace('.xlsx','').replace('.xls','')+'_result.xlsx')
+	excel.save(inputFileName.replace('.xlsx','').replace('.xls','')+'_result.xls')
 
 def writeSheet(sheet, fileName):
 	f = codecs.open(fileName+'_addBar.txt','r','utf-8')
