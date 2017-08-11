@@ -14,7 +14,7 @@ def convertDataLine(dataArray):
 def writeLineInFile(fileName, data, numberOfLine):
 	f = codecs.open(fileName+'.txt','a','utf-8')
 	for i in xrange(numberOfLine):
-		f.write(data+'\n')
+		f.write(data.replace('.0','')+'\n')
 		#f.write('\n')
 	f.close
 
