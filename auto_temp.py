@@ -115,7 +115,7 @@ def removeFile(fileList):
 		os.remove(fileName+'_addBar.txt')
 
 if __name__ == '__main__':
-	inputFileName = sys.argv[1]
+	inputFileName = raw_input("Path to excel file: ").decode('utf-8')
 	counterColName = raw_input("Sort by: ").decode('utf-8')
 	#############################
 	book = readInputFile(inputFileName)
