@@ -1,11 +1,16 @@
+BIN:=tempp
+
 all: test build
 
 build:
-	go build -o tempp *.go
+	go build -o ${BIN} *.go
 
 fmt:
 	go fmt
 
 test:
 	go test ./...
+
+clean:
+	rm -rf ${BIN}
 
