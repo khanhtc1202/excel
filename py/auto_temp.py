@@ -94,11 +94,11 @@ def exportExcelFile(inputFileName, fileList, counterColName):
 		sheet = excel.add_sheet(fileName)
 		writeSheet(sheet, fileName)
 	excel.save(outputFileName)
-	print "Output now available in "+outputFileName
+	print("Output now available in ", outputFileName)
 
 def writeSheet(sheet, fileName):
 	f = codecs.open(fileName+'_addBar.txt','r','utf-8')
-	print fileName+'_addBar.txt'
+	print(fileName, '_addBar.txt')
 	row = 0
 	for line in f:
 		row += 1
