@@ -6,7 +6,7 @@ Auto generate `tem`'s id from excel source for windows
 
 ### requirements
 
-- Python 2.7 (install go [here](https://www.python.org/downloads/))
+- Python 2.7 or 3 (install go [here](https://www.python.org/downloads/))
 - libs: xlwt, xlrd (install via pip)
 
 ### install
@@ -15,7 +15,10 @@ Auto generate `tem`'s id from excel source for windows
 - copy `auto_temp.py` to `C:\Python27\Scripts\`
 - place `auto_temp.bat` wherever you want
 
-## Note
+*Note:*
+- xlrd drop support for other file kinds than `.xls` from v1.2.0, use `pip install xlrd==1.2.0`.
+
+## Future work
 
 Alternative version is written in golang
 
